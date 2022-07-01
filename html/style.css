@@ -1,6 +1,6 @@
 /* Nice font for button from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 * {
     padding: 0;
     margin: 0;
@@ -16,12 +16,14 @@
     border-radius: 5px;
     background: transparent !important;
 }
+
 .button {
     cursor: pointer;
     display: flex;
     flex-direction: row !important;
     gap: 10px;
 }
+
 .title {
     cursor: default;
     gap: 10px;
@@ -54,19 +56,26 @@ body::-webkit-scrollbar {
     width: auto;
     max-width: 45%;
     height: 10%;
-    background: rgba(23, 23, 23, 90%);
-    color: white;
+    /* background: rgb(64, 95, 121); */
+    background: linear-gradient(to left, rgb(73, 89, 102) 50%, rgb(49, 116, 175) 50%);
+    /* background: linear-gradient(to right, black 50%, white 50%); */
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    color: rgb(255, 255, 255);
     margin: auto;
     position: relative;
     top: 10%;
     margin-top: 0.5rem;
     overflow: hidden;
     padding: 0.45rem;
-    border-radius: 0.15rem;
+    border-style: outset;
+    border-color: #ffffff;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0rem 0rem 0.5rem 0.05rem #000000;
-    cursor: pointer;
+    box-shadow: 0rem 0rem 0.25rem 0.20rem #000000;
+    cursor: grab;
 }
 
 .icon {
@@ -77,28 +86,31 @@ body::-webkit-scrollbar {
 }
 
 .button:hover {
-    background-color: #dc143c;
+    background-position: left bottom;
 }
 
 .title {
     width: auto;
     max-width: 45%;
     height: 10%;
-    background: rgba(23, 23, 23, 90%);
+    background: rgb(51, 97, 143);
+    border-style: outset;
     color: white;
+    font-weight: bolder;
     margin: auto;
     position: relative;
     top: 10%;
     margin-top: 0.5rem;
     overflow: hidden;
     padding: 0.45rem;
-    border-radius: 0.15rem;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0rem 0rem 0.5rem 0.05rem #000000;
+    box-shadow: 0rem 0rem 0.25rem 0.20rem #000000;
+    cursor: not-allowed;
 }
 
-.title > div.column > div.header {
+.title>div.header {
     text-decoration: underline !important;
 }
 
@@ -107,13 +119,13 @@ body::-webkit-scrollbar {
     cursor: default;
 }
 
-div > .text {
+div>.text {
     flex-direction: column;
     font-size: 0.75rem;
     overflow: hidden;
 }
 
-div > .header {
+div>.header {
     width: 100%;
     max-width: 100%;
     display: flex;
@@ -122,7 +134,7 @@ div > .header {
     justify-content: left;
     overflow: wrap;
     color: white;
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1.0rem;
+    font-weight: bolder;
     overflow: hidden;
 }
